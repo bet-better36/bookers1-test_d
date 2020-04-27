@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: underline;
+  font-weight:bold;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+    margin: 1px;
+}
+a:link { /*アクセスしたことのないリンク*/
+color:#333;
+}
+a:visited { /*アクセスしたことのあるリンク*/
+color:grey;
+}
+a:hover {/*マウスが上に乗っている状態*/
+color:#fff;
+background-color: #333;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    
+    font-weight: bold;
+}
+body {
+    line-height: 18px;
+    margin: 33px;
+    display: block;
+}
+table {
+	font-size: 13px;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    font-family: verdana;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    padding-bottom: 5px;
+}
+td {
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.succes-message{
+	color: green;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
