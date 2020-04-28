@@ -1,9 +1,8 @@
 class BooksController < ApplicationController
-#それぞれの状況で各アクションにおいてどの変数の形が良いのか
-#＠有無、単数複数
+
   def index
   	@books = Book.all
-    @book = Book.new #eachを回すためには空の変数が必要
+    @book = Book.new
   end
 
   def show
@@ -15,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def create
-  	@book = Book.new(book_params)　#errorを返すには＠を付けた変数が必要
+  	@book = Book.new(book_params)
   	if @book.save
   	flash[:notice] = "Book was successfully created."
   	redirect_to book_path(@book)
@@ -31,7 +30,7 @@ class BooksController < ApplicationController
   end
 
   def update
-  	@book = Book.find(params[:id])　#errorを返すには＠を付けた変数が必要
+  	@book = Book.find(params[:id])
   	if @book.update(book_params)
   	flash[:notice] = "Book was successfully updated."
   	redirect_to book_path(@book.id)
@@ -51,5 +50,4 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title,:body)
     end
-  end
-
+end
